@@ -54,9 +54,13 @@
         display: flex;
         flex-direction: row;
       }
+      section:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
 
       .description {
-        margin-left: 1em;
+        padding: 1em;
+        box-sizing: border-box;
       }
       .picbox {
         display: box;
@@ -159,10 +163,8 @@
   </head>
   <body>
     <div class="vid">
-        <iframe src="https://www.youtube.com/embed/xkMdLcB_vNU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
+        <iframe src="https://www.youtube.com/embed/xkMdLcB_vNU?rel=0&amp;controls=0&amp;showinfo=0&amp;list=PLbbbk7oJFBE3DYIq_8xMBrzj4qtK6CY05&amp;loop=1&amp;autoplay=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
         </iframe>
     </div>
     <article id="main">
