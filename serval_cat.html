@@ -3,15 +3,85 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>極度友趣</title>
+    <style>
+
+      body { font-size: 20px; }
+
+      .container {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      header {
+        width: 100%;
+      }
+
+      header a {
+        margin: 0 auto;
+      }
+
+      .lol, .hunting {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .description {
+        margin-left: 1em;
+      }
+      .picbox {
+        display: box;
+        box-flex: 1;
+        width: 300px;
+      }
+
+      .picbox img { width: 100%; }
+
+      .picbox .reference {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body>
-    <h1>藪貓</h1>
-    <div>
-      <img src="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg" alt="" />
-      <div class="reference">
-        <span>source: </span>
-        <a href="https://www.plurk.com/p/m7zfm8">作者噗浪</a>
-      </div>
-    </div>
+    <article class="container">
+      <header>
+        <h1><a target="_blank" href="https://zh.wikipedia.org/wiki/藪貓">藪貓</a></h1>
+      </header>
+      <h2>簡介</h2>
+      <section class="lol">
+        <div class="picbox">
+          <a href="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg">
+            <img src="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg" alt="" />
+          </a>
+          <div class="reference">
+            <span>source: </span>
+            <a href="https://www.plurk.com/p/m7zfm8">作者噗浪</a>
+          </div>
+        </div>
+        <div class="description">
+            <span>藪貓，是原生於非洲的一種野貓</span><br>
+            <span>主要分佈於撒哈拉沙漠以南的莽原氣候區</span><br>
+            <span>是纖瘦的中型貓，肩高 54-62 公分，體重 9-18 公斤，平均壽命在 12-20 年</span><br>
+            <span>外表是金黃色為底上面遍佈黑色斑點及條紋的毛皮</span><br>
+            <span>腿在所有貓科之中以比例來說是最長的</span>
+        </div>
+      </section>
+      <hr>
+      <h2>超猛的跳躍力</h2>
+      <section class="hunting">
+        <div class="picbox">
+          <img src="https://i.imgur.com/TK8vB4z.gif" alt="">
+        </div>
+        <div class="description">
+          <span>獵食時會先以聲音判斷獵物位置</span><br>
+          <span>之後再用高跳撲向目標</span>
+          <span>最高可超過 2 公尺</span>
+          <span>距離也可達 3.6 公尺</span>
+        </div>
+      </section>
+    </article>
   </body>
 </html>
