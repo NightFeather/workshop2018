@@ -10,6 +10,10 @@
         overflow-x: hidden;
       }
 
+      article#main {
+        width: 100vw;
+      }
+
       .container {
         width: 60%;
         margin: 0 auto;
@@ -79,7 +83,7 @@
         0% {
           transform: translateX(-100%);
         }
-        50% {
+        60% {
           transform: translateX(100%);
         }
         100% {
@@ -88,10 +92,10 @@
       }
 
       @keyframes peeking-turn {
-        40% {
+        30% {
           transform: rotateY(0deg);
         }
-        60% {
+        50% {
           transform: rotateY(180deg);
         }
         100% {
@@ -116,7 +120,7 @@
       }
 
       .serval-pop .serval-run img {
-        animation: peeking-turn 2s infinite ease-in-out;
+        animation: peeking-turn 2s infinite ease;
       }
 
       .serval-run::before {
@@ -130,45 +134,47 @@
     </style>
   </head>
   <body>
-    <article class="container">
-      <header>
-        <h1><a target="_blank" href="https://zh.wikipedia.org/wiki/藪貓">藪貓</a></h1>
-      </header>
-      <h2>簡介</h2>
-      <section class="lol">
-        <div class="picbox">
-          <a href="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg">
-            <img src="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg" alt="" />
-          </a>
-          <div class="reference">
-            <span>source: </span>
-            <a href="https://www.plurk.com/p/m7zfm8">作者噗浪</a>
+    <article id="main">
+      <div class="container">
+        <header>
+          <h1><a target="_blank" href="https://zh.wikipedia.org/wiki/藪貓">藪貓</a></h1>
+        </header>
+        <h2>簡介</h2>
+        <section class="lol">
+          <div class="picbox">
+            <a href="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg">
+              <img src="https://images.plurk.com/2wL4jFVUFpaCmI0WIOEi.jpg" alt="" />
+            </a>
+            <div class="reference">
+              <span>source: </span>
+              <a href="https://www.plurk.com/p/m7zfm8">作者噗浪</a>
+            </div>
           </div>
-        </div>
-        <div class="description">
-            <span>藪貓，是原生於非洲的一種野貓</span><br>
-            <span>主要分佈於撒哈拉沙漠以南的莽原氣候區</span><br>
-            <span>是纖瘦的中型貓，肩高 54-62 公分，體重 9-18 公斤，平均壽命在 12-20 年</span><br>
-            <span>外表是金黃色為底上面遍佈黑色斑點及條紋的毛皮</span><br>
-            <span>腿在所有貓科之中以比例來說是最長的</span>
-        </div>
-      </section>
-      <hr>
-      <h2>超猛的跳躍力</h2>
-      <section class="hunting">
-        <div class="picbox">
-          <img src="https://i.imgur.com/TK8vB4z.gif" alt="">
-        </div>
-        <div class="description">
-          <span>獵食時會先以聲音判斷獵物位置</span><br>
-          <span>之後再用高跳撲向目標</span>
-          <span>最高可超過 2 公尺</span>
-          <span>距離也可達 3.6 公尺</span>
-        </div>
-      </section>
-      <div class="serval-pop">
-        <div class="serval-run">
-          <img src="https://i.imgur.com/2WxxqOr.png" alt="">
+          <div class="description">
+              <span>藪貓，是原生於非洲的一種野貓</span><br>
+              <span>主要分佈於撒哈拉沙漠以南的莽原氣候區</span><br>
+              <span>是纖瘦的中型貓，肩高 54-62 公分，體重 9-18 公斤，平均壽命在 12-20 年</span><br>
+              <span>外表是金黃色為底上面遍佈黑色斑點及條紋的毛皮</span><br>
+              <span>腿在所有貓科之中以比例來說是最長的</span>
+          </div>
+        </section>
+        <hr>
+        <h2>超猛的跳躍力</h2>
+        <section class="hunting">
+          <div class="picbox">
+            <img src="https://i.imgur.com/TK8vB4z.gif" alt="">
+          </div>
+          <div class="description">
+            <span>獵食時會先以聲音判斷獵物位置</span><br>
+            <span>之後再用高跳撲向目標</span>
+            <span>最高可超過 2 公尺</span>
+            <span>距離也可達 3.6 公尺</span>
+          </div>
+        </section>
+        <div class="serval-pop">
+          <div class="serval-run">
+            <img src="https://i.imgur.com/2WxxqOr.png" alt="">
+          </div>
         </div>
       </div>
     </article>
