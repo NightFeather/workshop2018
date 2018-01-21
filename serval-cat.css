@@ -11,7 +11,7 @@ body {
 h1 { margin: 0; }
 
 .vid {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   width: 100vw;
@@ -25,7 +25,6 @@ h1 { margin: 0; }
 }
 
 article#main {
-  height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   padding: 1em;
@@ -45,10 +44,8 @@ header a {
   margin: 0 auto;
 }
 
-.lol, .hunting {
-  display: flex;
-  flex-direction: row;
-}
+.lol, .hunting { display: flex;}
+
 section:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -71,4 +68,19 @@ section:hover {
   justify-content: flex-end;
   align-items: center;
   font-size: 0.8em;
+}
+
+@media screen and (orientation: landscape) {
+  body { overflow: hidden; }
+  article#main { height: 100vh; }
+  section { flex-direction: row; }
+  .description { text-align: left; }
+}
+
+@media screen and (orientation: portrait) {
+  body { overflow-y: auto; }
+  article#main { width: auto; }
+  section { flex-direction: column; }
+  .container { width: 90%; }
+  .description { text-align: center; }
 }
