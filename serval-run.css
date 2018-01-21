@@ -155,7 +155,11 @@
 .serval-run::before {
   position: absolute;
   display: block;
-  right: -3em;
-  top: 50%;
+  right: 50%;
+  top: -1em;
   content: 'たのしー';
+  padding: 0.2em 0.3em;
+  background-color: gold;
+  color: green;
+  border-radius: 0.3em;
 }
