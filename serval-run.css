@@ -1,0 +1,161 @@
+
+@keyframes peeking-locate {
+  0% {
+    left: 0px;
+    right: unset;
+    top: unset;
+    bottom: 0px;
+    transform: translate(-40%, 30%);
+  }
+  25% {
+    left: unset;
+    right: 0px;
+    transform: rotateY(180deg) translate(-40%, 30%);
+  }
+  50% {
+    top: 0px;
+    bottom: unset;
+    right: 0px;
+    transform: rotateX(180deg) rotateY(180deg) translate(-40%, 30%);
+  }
+  75% {
+    top: 0px;
+    bottom: unset;
+    left: 0px;
+    right: unset;
+    transform: rotateX(180deg) translate(-40%, 30%);
+  }
+}
+
+@keyframes peeking-locate-portrait {
+  0% {
+    left: 0px;
+    right: unset;
+    top: unset;
+    bottom: 0px;
+    transform: matrix(0,-1,-1,0,30,105);
+  }
+  25% {
+    left: unset;
+    right: 0px;
+    transform: matrix(0,-1,1,0,-30,105);
+  }
+  50% {
+    top: 0px;
+    bottom: unset;
+    right: 0px;
+    transform: matrix(0,1,1,0,-30,-105);
+  }
+  75% {
+    top: 0px;
+    bottom: unset;
+    left: 0px;
+    right: unset;
+    transform: matrix(0,1,-1,0,30,-105);
+  }
+}
+
+@keyframes peeking-run {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes peeking-run-portrait {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes peeking-turn {
+  0% {
+    transform: rotate3d(0,0,0,180deg);
+  }
+  30% { /*start turn*/
+    transform: rotate3d(0,0,0,180deg);
+  }
+  50% { /*turn complete, momentum kicks in*/
+    transform: rotate3d(-0.22,1,0,180deg);
+  }
+  60% { /* momentum 0 */
+    transform: rotate3d(-0.25,1,0,180deg);
+  }
+  70% {
+    transform: rotate3d(0,1,0,180deg);
+  }
+  95% {
+    transform: rotate3d(0,1,0,180deg);
+  }
+}
+
+@media screen and (orientation: landscape){
+  .serval-pop {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    animation: peeking-locate 8s infinite step-end;
+    transform: translate(-40%, 30%);
+  }
+
+  .serval-pop .serval-run {
+    display: flex;
+    display: -webkit-flex;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+
+    align-items: flex-start;
+    width: 300px;
+    animation: peeking-run 2s infinite ease-in-out;
+  }
+
+  .serval-pop .serval-run img {
+    width: 100%;
+    animation: peeking-turn 2s infinite ease;
+  }
+}
+
+@media screen and (orientation: portrait){
+  .serval-pop {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    animation: peeking-locate-portrait 8s infinite step-end;
+    transform: matrix(0,-1,-1,0,120,135);
+  }
+
+  .serval-pop .serval-run {
+    display: flex;
+    display: -webkit-flex;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+
+    align-items: flex-start;
+    width: 150px;
+    animation: peeking-run-portrait 2s infinite ease-in-out;
+  }
+
+  .serval-pop .serval-run img {
+    width: 100%;
+    animation: peeking-turn 2s infinite ease;
+  }
+}
+
+.serval-run::before {
+  position: absolute;
+  display: block;
+  right: -3em;
+  top: 50%;
+  content: 'たのしー';
+}
