@@ -33,25 +33,25 @@
     right: unset;
     top: unset;
     bottom: 0px;
-    transform: matrix(0,-1,-1,0,30,105);
+    transform: matrix(0,-1,-1,0,-30,105);
   }
   25% {
     left: unset;
     right: 0px;
-    transform: matrix(0,-1,1,0,-30,105);
+    transform: matrix(0,-1,1,0,30,105);
   }
   50% {
     top: 0px;
     bottom: unset;
     right: 0px;
-    transform: matrix(0,1,1,0,-30,-105);
+    transform: matrix(0,1,1,0,30,-105);
   }
   75% {
     top: 0px;
     bottom: unset;
     left: 0px;
     right: unset;
-    transform: matrix(0,1,-1,0,30,-105);
+    transform: matrix(0,1,-1,0,-30,-105);
   }
 }
 
@@ -155,7 +155,11 @@
 .serval-run::before {
   position: absolute;
   display: block;
-  right: -3em;
-  top: 50%;
+  right: 50%;
+  top: -1em;
   content: 'たのしー';
+  padding: 0.2em 0.3em;
+  background-color: gold;
+  color: green;
+  border-radius: 0.3em;
 }
